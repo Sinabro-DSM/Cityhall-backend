@@ -1,0 +1,21 @@
+{
+  "name": "cityhall-backend",
+  "version": "0.0.0",
+  "description": "청소년들이 정치 및 시사 참여를 도와주는 웹서비스입니다.",
+  "main": "app.js",
+  "scripts": {
+    "start": "node ./bin/www",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sinabro-DSM/Cityhall-backend.git"
+  },
+  "dependencies": {
+    "dotenv": "^6.2.0",
+    "express": "^4.16.4",
+    "http-errors": "^1.7.1",
+    "morgan": "^1.9.1",
+    "path": "^0.12.7"
+  }
+}
