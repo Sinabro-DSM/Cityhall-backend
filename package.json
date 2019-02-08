@@ -5,16 +5,19 @@
   "main": "app.js",
   "scripts": {
     "start": "node ./bin/www",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha ./routes/*/*.spec.js"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Sinabro-DSM/Cityhall-backend.git"
   },
   "dependencies": {
+    "chai": "^4.2.0",
+    "chai-http": "^4.2.1",
     "dotenv": "^6.2.0",
     "express": "^4.16.4",
     "http-errors": "^1.7.1",
+    "mocha": "^5.2.0",
     "morgan": "^1.9.1",
     "path": "^0.12.7"
   }
