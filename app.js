@@ -1,9 +1,13 @@
 const createError = require('http-errors');
 const express = require('express');
 const logger = require('morgan');
+const mongoose = require('mongoose');
 require('dotenv').config();
 
 const app = express();
+
+mongoose.Promise = global.Promise;
+mongoose.connect(process.env.MONGODBURI, { useNewUrlParser: true, });
 
 app.use(logger('dev'));
 app.use(express.json());
