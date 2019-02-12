@@ -11,9 +11,10 @@ const Schema = mongoose.Schema;
  * @constructor User
  */
 const userSchema = new Schema({
-  name: { type: String, required: true, trim: true, },
-  email: { type: String, required: true, trim: true, },
-  password: { type: String, required: true, trim: true, },
+  nickname: { type: String, required: true, trim: true, },
+  id: { type: String, required: true, trim: true, },
+  password: { type: String, required: true, },
+  password_salt: { type: String, require: true, },
   image_path: { type: String, required: true, },
   is_admin: { type: Boolean, default: false, },
   scraps: { type: [Schema.Types.ObjectId], default: [], },
