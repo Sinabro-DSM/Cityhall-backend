@@ -14,9 +14,9 @@ const userSchema = new Schema({
   name: { type: String, required: true, trim: true, },
   email: { type: String, required: true, trim: true, },
   password: { type: String, required: true, trim: true, },
-  image_path: { type: String, required: true, trim: true, },
-  is_admin: { type: Boolean, required: true, },
-  scraps: { type: [Schema.Types.ObjectId], required: true, },
+  image_path: { type: String, required: true, },
+  is_admin: { type: Boolean, default: false, },
+  scraps: { type: [Schema.Types.ObjectId], default: [], },
   created_at: { type: Date, default: Date.now(), },
   updated_at: { type: Date, default: Date.now(), },
 });
