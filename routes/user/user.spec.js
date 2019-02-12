@@ -19,8 +19,9 @@ describe('User', () => {
     });
 
     after((done) => {
-      User.user.deleteMany({});
-      done();
+      User.user.deleteMany({}, (err) => {
+        done();
+      });
     });
 
     it('should return the status code 201', (done) => {
@@ -66,8 +67,9 @@ describe('User', () => {
     });
 
     after((done) => {
-      User.user.deleteMany({});
-      done();
+      User.user.deleteMany({}, (err) => {
+        done();
+      });
     });
 
     it('should return the status 200', (done) => {
